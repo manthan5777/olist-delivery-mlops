@@ -1,0 +1,23 @@
+{
+  "model_name": "dummy_regressor",
+  "selection_metric": "validation_mae",
+  "target": "actual_delivery_days",
+  "raw_feature_count": 47,
+  "validation_metrics": {
+    "model_name": "dummy_regressor",
+    "mae": 5.694115923295599,
+    "rmse": 7.741905806498423,
+    "median_absolute_error": 4.727390046296298,
+    "r2_score": -0.006736909945560754,
+    "within_2_days": 0.18703345313795963,
+    "within_5_days": 0.518938346696157,
+    "within_7_days": 0.7101188830522532,
+    "minimum_prediction": 11.473935185185184,
+    "maximum_prediction": 11.473935185185184,
+    "average_prediction": 11.473935185185182,
+    "training_seconds": 0.5224233000189997,
+    "prediction_seconds": 0.043253099982393906,
+    "prediction_ms_per_order": 0.0029895700844894874
+  },
+  "model_path": "C:\\Users\\ManthanWalvatkar\\Downloads\\olist-delivery-mlops\\olist-delivery-mlops\\models\\regression\\best_regression_pipeline.joblib"
+}

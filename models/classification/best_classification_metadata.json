@@ -1,0 +1,37 @@
+{
+  "model_name": "logistic_regression",
+  "selection_metric": "validation_pr_auc",
+  "classification_threshold": 0.65,
+  "feature_count": 47,
+  "target": "late_delivery",
+  "validation_metrics": {
+    "model_name": "logistic_regression",
+    "accuracy": 0.7788222283660492,
+    "precision": 0.13656783468104222,
+    "recall": 0.5899094437257438,
+    "f1_score": 0.22178988326848248,
+    "roc_auc": 0.7560934553219345,
+    "pr_auc": 0.1517937016636295,
+    "true_negative": 10812,
+    "false_positive": 2883,
+    "false_negative": 317,
+    "true_positive": 456,
+    "training_seconds": 3.44574600001215,
+    "prediction_seconds": 0.3432895999867469,
+    "prediction_ms_per_order": 0.023727508984430944
+  },
+  "model_path": "C:\\Users\\ManthanWalvatkar\\Downloads\\olist-delivery-mlops\\olist-delivery-mlops\\models\\classification\\best_classification_pipeline.joblib",
+  "threshold_selection_metric": "validation_f1_score",
+  "threshold_validation_metrics": {
+    "threshold": 0.65,
+    "accuracy": 0.9000552944429084,
+    "precision": 0.2030008826125331,
+    "recall": 0.2975420439844761,
+    "f1_score": 0.24134312696747115,
+    "true_negative": 12792,
+    "false_positive": 903,
+    "false_negative": 543,
+    "true_positive": 230,
+    "predicted_late_count": 1133
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "threshold": 0.65,
+  "test_rows": 14469,
+  "actual_late_orders": 957,
+  "actual_late_rate": 0.06614140576404727,
+  "predicted_late_orders": 1630,
+  "accuracy": 0.8464994125371483,
+  "precision": 0.11226993865030675,
+  "recall": 0.19122257053291536,
+  "f1_score": 0.1414766138384229,
+  "roc_auc": 0.6801068658038708,
+  "pr_auc": 0.11501499667470369,
+  "true_negative": 12065,
+  "false_positive": 1447,
+  "false_negative": 774,
+  "true_positive": 183,
+  "classification_report": {
+    "on_time": {
+      "precision": 0.939714931069398,
+      "recall": 0.8929100059206632,
+      "f1-score": 0.9157147736328792,
+      "support": 13512.0
+    },
+    "late": {
+      "precision": 0.11226993865030675,
+      "recall": 0.19122257053291536,
+      "f1-score": 0.1414766138384229,
+      "support": 957.0
+    },
+    "accuracy": 0.8464994125371483,
+    "macro avg": {
+      "precision": 0.5259924348598524,
+      "recall": 0.5420662882267893,
+      "f1-score": 0.5285956937356511,
+      "support": 14469.0
+    },
+    "weighted avg": {
+      "precision": 0.8849865560783778,
+      "recall": 0.8464994125371483,
+      "f1-score": 0.8645055733479048,
+      "support": 14469.0
+    }
+  }
+}

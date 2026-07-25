@@ -1,0 +1,28 @@
+{
+  "selection_metric": "validation_f1_score",
+  "default_threshold_metrics": {
+    "threshold": 0.5,
+    "accuracy": 0.7788222283660492,
+    "precision": 0.13656783468104222,
+    "recall": 0.5899094437257438,
+    "f1_score": 0.22178988326848248,
+    "true_negative": 10812.0,
+    "false_positive": 2883.0,
+    "false_negative": 317.0,
+    "true_positive": 456.0,
+    "predicted_late_count": 3339.0
+  },
+  "selected_threshold": 0.65,
+  "selected_threshold_metrics": {
+    "threshold": 0.65,
+    "accuracy": 0.9000552944429084,
+    "precision": 0.2030008826125331,
+    "recall": 0.2975420439844761,
+    "f1_score": 0.24134312696747115,
+    "true_negative": 12792,
+    "false_positive": 903,
+    "false_negative": 543,
+    "true_positive": 230,
+    "predicted_late_count": 1133
+  }
+}
