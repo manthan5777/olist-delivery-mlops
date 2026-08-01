@@ -1,14 +1,104 @@
 services:
+
+  redis:
+    image: redis:7-alpine
+
+    command:
+      - redis-server
+      - --appendonly
+      - "yes"
+
+    volumes:
+      - redis_data:/data
+
+    healthcheck:
+      test:
+        - CMD
+        - redis-cli
+        - ping
+      interval: 5s
+      timeout: 3s
+      retries: 10
+      start_period: 5s
+
+    restart: unless-stopped
+
+
   api:
     build:
       context: .
       dockerfile: Dockerfile
 
-    image: olist-delivery-api:v1
+    image: olist-delivery-api:v2
 
-    container_name: olist-delivery-api
+    environment:
+      REDIS_URL: redis://redis:6379/0
 
-    ports:
-      - "8001:8000"
+    expose:
+      - "8000"
+
+    depends_on:
+      redis:
+        condition: service_healthy
 
     restart: unless-stopped
+
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+
+    image: olist-delivery-frontend:v1
+
+    environment:
+      API_BASE_URL: http://api:8000
+
+    expose:
+      - "8501"
+
+    depends_on:
+      api:
+        condition: service_healthy
+
+    restart: unless-stopped
+
+
+  worker:
+    build:
+      context: .
+      dockerfile: worker/Dockerfile
+
+    image: olist-delivery-worker:v1
+
+    environment:
+      REDIS_URL: redis://redis:6379/0
+
+    depends_on:
+      redis:
+        condition: service_healthy
+
+    restart: unless-stopped
+
+
+  nginx:
+    image: nginx:alpine
+
+    ports:
+      - "8080:80"
+
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+
+    depends_on:
+      api:
+        condition: service_healthy
+
+      frontend:
+        condition: service_healthy
+
+    restart: unless-stopped
+
+
+volumes:
+  redis_data:
