@@ -1,0 +1,19 @@
+{
+  "evaluation_split": "test",
+  "model_name": "extra_trees",
+  "classification_threshold": 0.5,
+  "positive_rate_pr_auc_baseline": 0.06614140576404727,
+  "pr_auc": 0.0673746419575913,
+  "roc_auc": 0.4880115078635933,
+  "precision": 0.07105263157894737,
+  "recall": 0.14106583072100312,
+  "f1_score": 0.09450472523626181,
+  "accuracy": 0.821203953279425,
+  "true_negative": 11747,
+  "false_positive": 1765,
+  "false_negative": 822,
+  "true_positive": 135,
+  "inference_seconds_for_both_models": 2.5971604000078514,
+  "inference_ms_per_order_for_both_models": 0.17949826525729845,
+  "test_evaluated_once": true
+}

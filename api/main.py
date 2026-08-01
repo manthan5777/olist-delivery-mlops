@@ -51,8 +51,8 @@ CLASSIFICATION_METADATA_PATH = (
 REGRESSION_MODEL_PATH = (
     PROJECT_ROOT
     / "models"
-    / "regression"
-    / "best_regression_pipeline.joblib"
+    / "improved"
+    / "regression_pipeline.joblib"
 )
 
 

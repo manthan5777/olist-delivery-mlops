@@ -1,0 +1,8 @@
+{
+  "original_dummy_validation_mae": 5.694115923295599,
+  "improved_dummy_validation_mae": 5.694115923295599,
+  "selected_model": "hist_gradient_boosting",
+  "selected_validation_mae": 4.835660148724143,
+  "mae_improvement_vs_improved_dummy_percent": 15.076190687642434,
+  "selected_model_beats_dummy": true
+}
