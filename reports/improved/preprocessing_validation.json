@@ -1,0 +1,18 @@
+{
+  "raw_feature_count": 47,
+  "engineered_feature_count": 85,
+  "derived_feature_count": 38,
+  "categorical_feature_count": 8,
+  "numerical_feature_count": 77,
+  "train_preprocessed_shape": [
+    67518,
+    557
+  ],
+  "validation_preprocessed_shape": [
+    14468,
+    557
+  ],
+  "train_invalid_values": 0,
+  "validation_invalid_values": 0,
+  "test_data_loaded": false
+}

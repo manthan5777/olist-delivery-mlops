@@ -1,0 +1,7 @@
+{
+  "original_logistic_regression_validation_pr_auc": 0.1517937016636295,
+  "improved_logistic_regression_validation_pr_auc": 0.15188430698954053,
+  "absolute_pr_auc_change": 9.060532591104176e-05,
+  "selected_model": "extra_trees",
+  "selected_model_validation_pr_auc": 0.15238181046897423
+}

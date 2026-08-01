@@ -36,6 +36,13 @@ dist/
 # Logs
 *.log
 
+# Keep summarized ML report CSV files
+!reports/improved/**/*.csv
+
 # Operating-system files
 .DS_Store
 Thumbs.db
+# Generated ML artifacts not committed
+models/improved/classification_pipeline.joblib
+reports/improved/classification/final_test_predictions.csv
+reports/improved/regression/final_test_predictions.csv

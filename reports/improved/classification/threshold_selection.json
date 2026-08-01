@@ -1,0 +1,39 @@
+{
+  "selection_metric": "validation_f1_score",
+  "selected_threshold": 0.5,
+  "default_threshold_metrics": {
+    "model_name": "selected_model",
+    "threshold": 0.5,
+    "positive_rate_pr_auc_baseline": 0.053428255460326236,
+    "pr_auc": 0.15238181046897423,
+    "roc_auc": 0.7294054023928241,
+    "precision": 0.17472598323662153,
+    "recall": 0.35058214747736094,
+    "f1_score": 0.2332185886402754,
+    "accuracy": 0.8768316284213437,
+    "true_negative": 12415,
+    "false_positive": 1280,
+    "false_negative": 502,
+    "true_positive": 271,
+    "training_seconds": 0.0,
+    "inference_seconds": 0.0,
+    "inference_ms_per_order": 0.0
+  },
+  "selected_threshold_metrics": {
+    "threshold": 0.5,
+    "positive_rate_pr_auc_baseline": 0.053428255460326236,
+    "pr_auc": 0.15238181046897423,
+    "roc_auc": 0.7294054023928241,
+    "precision": 0.17472598323662153,
+    "recall": 0.35058214747736094,
+    "f1_score": 0.2332185886402754,
+    "accuracy": 0.8768316284213437,
+    "true_negative": 12415,
+    "false_positive": 1280,
+    "false_negative": 502,
+    "true_positive": 271,
+    "training_seconds": 0.0,
+    "inference_seconds": 0.0,
+    "inference_ms_per_order": 0.0
+  }
+}

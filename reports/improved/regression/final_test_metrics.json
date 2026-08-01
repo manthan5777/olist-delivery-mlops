@@ -1,0 +1,12 @@
+{
+  "evaluation_split": "test",
+  "model_name": "hist_gradient_boosting",
+  "mae": 4.586883392260111,
+  "rmse": 5.92669557332629,
+  "median_absolute_error": 3.8620063295459897,
+  "r2_score": -0.1775570737218366,
+  "within_2_days": 0.2604188264565623,
+  "within_5_days": 0.6154537286612758,
+  "within_7_days": 0.78948095929228,
+  "test_evaluated_once": true
+}
