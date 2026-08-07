@@ -374,8 +374,6 @@ def health() -> dict[str, Any]:
             len(MODEL_FEATURES),
         "redis_connected":
             redis_is_connected(),
-        "redis_url":
-            REDIS_URL,
     }
 
 
