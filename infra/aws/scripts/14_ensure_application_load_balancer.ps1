@@ -61,6 +61,32 @@ $VpcId = $VpcId.Trim()
 Write-Host "Default VPC: $VpcId"
 
 # --------------------------------------------------
+# Find Application Load Balancer security group
+# --------------------------------------------------
+
+$AlbSecurityGroupId = aws ec2 describe-security-groups `
+    --filters `
+        "Name=vpc-id,Values=$VpcId" `
+        "Name=group-name,Values=$AlbSecurityGroupName" `
+    --region $Region `
+    --profile $AwsProfile `
+    --query "SecurityGroups[0].GroupId" `
+    --output text `
+    --no-cli-pager
+
+if (
+    $LASTEXITCODE -ne 0 -or
+    [string]::IsNullOrWhiteSpace($AlbSecurityGroupId) -or
+    $AlbSecurityGroupId -eq "None"
+) {
+    throw "Unable to find ALB security group: $AlbSecurityGroupName"
+}
+
+$AlbSecurityGroupId = $AlbSecurityGroupId.Trim()
+
+Write-Host "ALB Security Group: $AlbSecurityGroupId"
+
+# --------------------------------------------------
 # Find available subnets
 # --------------------------------------------------
 
@@ -268,6 +294,25 @@ $LoadBalancerArn = $LoadBalancer.LoadBalancerArn
 
 if ([string]::IsNullOrWhiteSpace($LoadBalancerArn)) {
     throw "Unable to determine load balancer ARN."
+}
+
+# --------------------------------------------------
+# Ensure the intended ALB security group is attached
+# --------------------------------------------------
+
+Write-Host "Synchronizing ALB security group."
+
+aws elbv2 set-security-groups `
+    --load-balancer-arn $LoadBalancerArn `
+    --security-groups $AlbSecurityGroupId `
+    --region $Region `
+    --profile $AwsProfile `
+    --output json `
+    --no-cli-pager |
+Out-Null
+
+if ($LASTEXITCODE -ne 0) {
+    throw "Unable to configure the ALB security group."
 }
 
 Write-Host "Waiting for ALB to become available."
