@@ -6,7 +6,7 @@ from src.features.feature_config import MODEL_FEATURES
 
 def sample_features() -> dict:
     data = pd.read_parquet(
-        "data/processed/splits/validation.parquet",
+        "tests/fixtures/sample_validation_row.parquet",
         columns=MODEL_FEATURES,
     )
     return data.iloc[0][MODEL_FEATURES].to_dict()
