@@ -46,3 +46,4 @@ Thumbs.db
 models/improved/classification_pipeline.joblib
 reports/improved/classification/final_test_predictions.csv
 reports/improved/regression/final_test_predictions.csv
+!tests/fixtures/*.parquet
